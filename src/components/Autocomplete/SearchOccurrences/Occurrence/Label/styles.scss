@@ -1,0 +1,62 @@
+@keyframes highlightBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.occurrence-label_container {
+  text-transform: uppercase;
+  font-size: 25px;
+  color: gray;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+  .occurrence-label_highlight {
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 0 0 0 2px;
+    background-size: 400% 400%;
+    background-image: linear-gradient(
+      180deg,
+      deepskyblue 0,
+      dodgerblue 25%,
+      deepskyblue 50%,
+      dodgerblue 75%,
+      deepskyblue 100%
+    );
+    animation: highlightBackground 4000ms linear infinite;
+  }
+
+  .occurrence-label_code {
+    margin: 0 0 2.5px;
+
+    * {
+      font-size: 18px;
+      letter-spacing: -1px;
+    }
+
+    .occurrence-label_highlight {
+      padding: 0 2px 0 2px;
+    }
+  }
+}
+
+#search-registers{
+  [role="option"] {
+    &:hover, &:focus, &:active {
+      .occurrence-label_container {
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+  letter-spacing: 2px;
+}
+
+:root {
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url('./assets/img/grass-background.jpg');
+}
+
+@keyframes animatePokedex {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  25% {
+    transform: rotate(-5deg) translate(-5px, -15px);
+  }
+  50% {
+    transform: rotate(0) translate(0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate(-5px, -15px);
+  }
+  100% {
+    transform: rotate(0) translate(0, 0);
+  }
+}
+

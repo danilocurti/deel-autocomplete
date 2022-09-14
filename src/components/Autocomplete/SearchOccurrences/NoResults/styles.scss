@@ -1,0 +1,19 @@
+.search-occurrences_no-results_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .search-occurrences_no-results_text {
+    font-size: 30px;
+    padding: 0 5px;
+    color: white;
+  }
+
+  .search-occurrences_no-results_image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    transform: translate(20%, 50px);
+  }
+}
